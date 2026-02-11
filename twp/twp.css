@@ -1,17 +1,61 @@
 @charset "utf-8";
 /* CSS Document */
+body{
+    margin: 0;
+    padding: 0;
+    color: #2a2a2a;
+    background: #5a5a5a;
+    font-size: 20px;
+    line-height: 1.5em;  /* adjust as needed */	
+	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"
+}
+
 h1{
 	color:#D0A16A;
-	background: #3C3E48;
+	background:#2D172E;
 }
 h2{
 	background:#779DBD;
 }
 p{
-	color:#FFFFFF;
+	color:#000000;
 	font-stretch: 18px;
 }
 
-body{
-	background: #2B2B2B;
+.wrapper {
+	width:900px;
+	padding: 36px;
+	margin: 0 auto;
+	border: 2px solid cyan;
+	background: white;
+}
+
+a {
+	color:#7B7515;
+}
+a:hover {
+	color:#B800B9;
+}
+
+nav.sitenav{
+	padding: 4px 0;
+}
+
+nav.sitenav a{
+	color:#F6A300;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 110%;
+	padding: 4px;
+}
+nav.sitenav a:hover{
+	color:#00A1D8;
+	font-weight: bold;
+	text-decoration: none;
+	font-size: 110%;
+	padding: 4px;
+}
+
+.pagenav a {
+	text-decoration: none;
 }
