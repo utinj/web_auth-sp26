@@ -1,5 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
+<script src="https://kit.fontawesome.com/49c671f23d.js" crossorigin="anonymous"></script>
 body{
     margin: 0;
     padding: 0;
@@ -38,10 +39,12 @@ a:hover {
 }
 
 nav.sitenav{
+	background: grey;
 	padding: 4px 0;
 }
 
 nav.sitenav a{
+	display: inline-block;
 	color:#F6A300;
 	font-weight: bold;
 	text-decoration: none;
@@ -59,3 +62,26 @@ nav.sitenav a:hover{
 .pagenav a {
 	text-decoration: none;
 }
+/* gallery grid CSS */
+        
+        div.gallery-grid {
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-row-gap: 20px ;
+            justify-items: center;
+            align-items: start;
+            justify-content: space-between;
+			padding-left: 0px;
+        }
+                        
+        div.gallery-item {
+            width: 270px; /*should match the width of your images + width of border (if any) */
+            text-align: center;
+        } 
+        
+    /* css for styling the p/caption under the image */       
+        div.gallery-item p {
+            margin: .25em 0;
+            line-height: 135%;
+			font-size: 90%;
+        }
