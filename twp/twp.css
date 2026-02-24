@@ -1,6 +1,6 @@
 @charset "utf-8";
 /* CSS Document */
-<script src="https://kit.fontawesome.com/49c671f23d.js" crossorigin="anonymous"></script>
+
 body{
     margin: 0;
     padding: 0;
@@ -13,7 +13,6 @@ body{
 
 h1{
 	color:#D0A16A;
-	background:#2D172E;
 }
 h2{
 	background:#779DBD;
@@ -38,11 +37,14 @@ a:hover {
 	color:#B800B9;
 }
 
-nav.sitenav{
-	background: grey;
-	padding: 4px 0;
+.sitenav {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     column-gap: 32px;     
+	background: #363636;
 }
-
 nav.sitenav a{
 	display: inline-block;
 	color:#F6A300;
