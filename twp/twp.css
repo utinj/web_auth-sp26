@@ -41,12 +41,13 @@ a:hover {
      display: flex;
      flex-direction: row;
      justify-content: center;
-     align-items: center;
-     column-gap: 32px;     
+     column-gap: 32px; 
 	background: #363636;
 }
 nav.sitenav a{
-	display: inline-block;
+	display: inline-flex;
+	flex:1;
+	justify-content: center;
 	color:#F6A300;
 	font-weight: bold;
 	text-decoration: none;
@@ -57,8 +58,14 @@ nav.sitenav a:hover{
 	color:#00A1D8;
 	font-weight: bold;
 	text-decoration: none;
-	font-size: 110%;
+	font-size: 150%;
 	padding: 4px;
+	animation: mymove 2s;
+	animation-fill-mode: forwards;
+}
+@keyframes mymove {
+	0% {flex:1;}
+  100% {flex:1.5;}
 }
 
 .pagenav a {
