@@ -87,3 +87,14 @@ nav.sitenav a:hover{
             line-height: 135%;
 			font-size: 90%;
         }
+table, td {
+  border: 1px solid;
+	border-spacing: 1px;
+	width: auto;
+	
+}
+th {
+	border-block-end: 2px solid;
+	background:#DAC296;
+}
+tr:nth-child(even) {background-color: #f2f2f2;}
