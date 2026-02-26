@@ -22,11 +22,17 @@ p{
 	font-stretch: 18px;
 }
 
+.site-header{
+	background-color: #9E9E9E;
+  	padding: 20px;
+	margin:0 auto;
+	border: 1px solid #004C61;
+}
 .wrapper {
 	width:900px;
 	padding: 36px;
 	margin: 0 auto;
-	border: 2px solid cyan;
+	border: 2px solid #004C61;
 	background: white;
 }
 
