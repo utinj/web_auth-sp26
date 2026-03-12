@@ -14,6 +14,10 @@ body{
 h1{
 	color:#D0A16A;
 }
+span{
+	color:#929462;
+	font-size:50%;
+}
 h2{
 	background:#779DBD;
 	margin-top: 60px;
@@ -23,16 +27,23 @@ p{
 	color:#000000;
 	font-stretch: 18px;
 }
-
+.center-img{
+	display:block;
+	margin:auto;
+}
 .site-header{
 	background-color: #363636;
   	padding: 20px;
 	margin:0 auto;
+	box-shadow:0px 2px 2px;
 }
 .site-footer{
-	background-color: #252525;
+	background-color: #404040;
   	padding: 20px;
 	margin:0 auto;
+	box-shadow:0px -2px 2px;
+	text-align: center;
+	line-height: 1em;
 }
 .wrapper {
 	width:900px;
@@ -74,8 +85,23 @@ nav.sitenav a:hover{
 	text-decoration: none;
 	font-size: 150%;
 	padding: 4px;
-	animation: mymove 2s;
+	animation: mymove 1s;
 	animation-fill-mode: forwards;
+}
+.pagenav{
+	display: flex;
+     flex-direction: row;
+     justify-content: center;
+	column-gap: 1em;
+}
+nav.pagenav a{
+	color:#C95D28;
+	text-decoration: none;
+	font-size: 100%;
+}
+nav.pagenav a:hover{
+	color:#00A1D8;
+	text-decoration: none;
 }
 @keyframes mymove {
 	0% {flex:1;}
@@ -95,6 +121,24 @@ nav.sitenav a:hover{
 	
 }
 .lead-display h1{
+	background:#FFFFFF;
+	font-size:30;
+	width:100%;
+	padding: 1em 5em;
+	margin: 0;
+	position:absolute;
+	top:100px;
+}
+.lead-display-about{
+	width: 100%;
+	height:auto;
+	background-image:url("assets/IMG_3255.jpeg");
+	background-size:100%;
+	padding-top: 500px;
+	position: relative;
+	
+}
+.lead-display-about h1{
 	background:#FFFFFF;
 	font-size:30;
 	width:100%;
