@@ -54,6 +54,19 @@ p{
 	background: white;
 }
 
+.wrapper-grid{
+	display:grid;
+	gap: 0.5em 0.5em;
+	grid-template-columns: repeat(6,1fr);
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+		"header header header header header header"
+		"main main main main aside aside"
+		"footer footer footer footer footer footer"
+}
+.wrapper-grid .site-header{
+	grid-area: header;
+}
 a {
 	color:#7B7515;
 	text-decoration: none;
