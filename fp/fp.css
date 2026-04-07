@@ -31,7 +31,10 @@ p{
 	display:block;
 	margin:auto;
 }
-.site-header{
+.site-header{ /*Height: 48 to 64px | 
+	Width: site header can stretch across width of body or width of wrapper
+	All actions should fit within wrapper
+	Logo and menus should not be groups together on one side with nothing on the other*/
 	background-color: #363636;
   	padding: 20px;
 	margin:0 auto;
@@ -63,6 +66,19 @@ p{
 		"header header header header header header"
 		"main main main main aside aside"
 		"footer footer footer footer footer footer"
+}
+.article-grid{
+	display:grid;
+	gap: 0.5em 0.5em;
+	grid-template-columns: repeat(6,1fr);
+	grid-template-rows: auto auto auto;
+	grid-template-areas:
+		"rheader rheader rheader rheader rheader rheader"
+		"rmain rmain rmain rmain raside raside"
+		"rfooter rfooter rfooter rfooter rfooter rfooter"
+}
+.article-grid .review_header{
+	grid-area: rheader;
 }
 .wrapper-grid .site-header{
 	grid-area: header;
