@@ -1,25 +1,31 @@
 @charset "utf-8";
-/* CSS Document */
+/* CSS Document
+Home
+Reviews
+Pictoral
+Map
+Feature (research, writing, and picture)
+Additional page of choice
+About*/
 
 body{
     margin: 0;
     padding: 0;
     color: #2a2a2a;
-    background: #5a5a5a;
+    background: #6666CC;
     font-size: 20px;
     line-height: 1.5em;  /* adjust as needed */	
 	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"
 }
 
 h1{
-	color:#D0A16A;
+	color:#00314B;
 }
 span{
-	color:#929462;
+	color:#1978A9;
 	font-size:50%;
 }
 h2{
-	background:#779DBD;
 	margin-top: 60px;
 	padding:10px;
 }
@@ -36,7 +42,7 @@ p{
 	All actions should fit within wrapper
 	Logo and menus should not be groups together on one side with nothing on the other*/
 	background-color: #363636;
-  	padding: 20px;
+  	padding: 15px;
 	margin:0 auto;
 	box-shadow:0px 2px 2px;
 }
@@ -54,13 +60,13 @@ p{
 	padding: 36px;
 	margin: 0 auto;
 	border: 2px solid #004C61;
-	background: white;
+	background: #EAEAEA;
 }
 
 .wrapper-grid{
 	display:grid;
 	gap: 0.5em 0.5em;
-	grid-template-columns: repeat(6,1fr);
+	grid-template-columns: repeat(6, 1{fr});
 	grid-template-rows: auto auto auto;
 	grid-template-areas:
 		"header header header header header header"
@@ -68,19 +74,39 @@ p{
 		"footer footer footer footer footer footer"
 }
 .article-grid{
-	display:grid;
+	display: grid;
 	gap: 0.5em 0.5em;
-	grid-template-columns: repeat(6,1fr);
-	grid-template-rows: auto auto auto;
+	grid-template-columns: repeat(6,1{fr});
+	grid-template-rows: auto auto auto auto auto auto;
 	grid-template-areas:
 		"rheader rheader rheader rheader rheader rheader"
-		"rmain rmain rmain rmain raside raside"
+		"rlead rlead rlead rlead raside raside"
+		"rinfo rinfo rinfo rinfo raside raside"
+		"rtext rtext rtext rtext raside raside"
 		"rfooter rfooter rfooter rfooter rfooter rfooter"
 }
-.article-grid .review_header{
+.review_header{
 	grid-area: rheader;
 }
-.wrapper-grid .site-header{
+.review_aside{
+	font-size:85%;
+	grid-area: raside;
+}
+.review_lead{
+	grid-area: rlead;
+}
+.review_info{
+	grid-area: rinfo;
+	margin: auto;
+	text-align:center;
+}
+.review_text{
+	grid-area: rtext;
+}
+.review_footer{
+	grid-area: rfooter;
+}
+.site-header{
 	grid-area: header;
 }
 a {
@@ -95,8 +121,10 @@ a:hover {
      display: flex;
      flex-direction: row;
      justify-content: center;
-     column-gap: 32px; 
+     column-gap: 0px; 
 	background: #363636;
+	width: 900px;
+	margin: 0 auto;
 }
 nav.sitenav a{
 	display: inline-flex;
@@ -106,16 +134,13 @@ nav.sitenav a{
 	font-weight: bold;
 	text-decoration: none;
 	font-size: 110%;
-	padding: 4px;
+	
 }
 nav.sitenav a:hover{
 	color:#00A1D8;
 	font-weight: bold;
 	text-decoration: none;
 	font-size: 150%;
-	padding: 4px;
-	animation: mymove 1s;
-	animation-fill-mode: forwards;
 }
 .pagenav{
 	display: flex;
@@ -132,10 +157,6 @@ nav.pagenav a:hover{
 	color:#00A1D8;
 	text-decoration: none;
 }
-@keyframes mymove {
-	0% {flex:1;}
-  100% {flex:1.2;}
-}
 
 .pagenav a {
 	text-decoration: none;
@@ -149,15 +170,6 @@ nav.pagenav a:hover{
 	position: relative;
 	
 }
-.lead-display h1{
-	background:#FFFFFF;
-	font-size:30;
-	width:100%;
-	padding: 1em 5em;
-	margin: 0;
-	position:absolute;
-	top:100px;
-}
 .lead-display-about{
 	width: 100%;
 	height:auto;
@@ -166,15 +178,6 @@ nav.pagenav a:hover{
 	padding-top: 500px;
 	position: relative;
 	
-}
-.lead-display-about h1{
-	background:#FFFFFF;
-	font-size:30;
-	width:100%;
-	padding: 1em 5em;
-	margin: 0;
-	position:absolute;
-	top:100px;
 }
 /* gallery grid CSS */
         
@@ -199,6 +202,7 @@ nav.pagenav a:hover{
             line-height: 135%;
 			font-size: 90%;
         }
+
 table, td {
   border: 1px solid;
 	border-spacing: 1px;

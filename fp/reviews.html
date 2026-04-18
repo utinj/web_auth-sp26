@@ -2,31 +2,110 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>reviews</title>
+<title>Reviews</title>
 	<link rel="stylesheet" href="fp.css" type="text/css">
 </head>
+<script src="https://kit.fontawesome.com/49c671f23d.js" crossorigin="anonymous"></script>
 
 <body>
+	<header class="site-header"><!-- site header starts -->
+	<nav class="sitenav"> 
+  	<a href="twp_index.html" class="site-logo"> <img class="site-logo-image" src="assets/twp-sitelogo.svg" width="150px" alt="Site logo for "> </a> 
+ 
+  
+    	<a href="fp_main.html">Latest</a> <!-- this links to your main page (the one you're working at the moment) --> 
+    	<a href="reviews.html">Reviews</a>
+    	<a href="inventory.html">Catalogue</a>
+    	<a href="fp_about.html">About</a>
+  	</nav> 
+
+	</header><!-- site header ends -->
+	
+	
 	<div class="wrapper">
-		<article id = "rev1" class = "review">
-	<h2>Godot – Flexible, Free, Fast!</h2>
+	<h1>Reviews</h1>
+	<article id = "review1" class = "article-grid">
+
+	<h2 class="review_header">Godot – Flexible, Free, Fast!<br><span>April 2nd, 2026 by utinj</span></br></h2>
+		
+	<div class="review_aside">
+		<h3>Alternatives</h3>
+		<p>Unity - The industry standard. Versatile, supported, and free for beginners. The most popular option for game engines.</p>
+		<p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+		<hr>
+		<p>Unreal - Graphics and power above all. The most in-depth engine when it comes to graphical fidelity. Hard for beginners.</p>
+		<p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></p>
+		<hr>
+		<p>GameMaker - A beginner oriented engine with many tools and resources designed for those starting out.</p>
+		<p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></p>
+	</div>
+		
+	<div class="review_lead">
+	<img src="assets/Godot_icon.svg.png" class="center" width ="100px" alt="Godot logo">	
+	</div>
+	<div class="review_info">
+<table>
+<tr><td>Supported OS</td><td> Windows, Linux, Mac</td></tr>
+<tr><td>Size</td><td> ~150 mb</td></tr>
+<tr><td>Engine type</td><td> Scripting</td></tr>
+<tr><td>Recommended Specs</td><td> Very low</td></tr>
+<tr><td>Price</td><td> Free!</td></tr>
+</table>
+
+
+		<p>Ease of use: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+		<p>Versatility: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+		<p>Overall: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></p>
+		
+		<a href="https://godotengine.org/">Godot's website</a>
+	</div>
+	<div class="review_text">
 	<p>Godot is a flexible, free, open source game engine with 2D and 3D support. In recent years, Godot has surged in popularity and is now a cornerstone of indie game development. As it relies heavily on scripting, it is an engine geared towards those with some programming experience, much like Unity, its primary competition for indie development. As an open source project, you can find their GitHub <a href="https://github.com/godotengine/godot">here. </a>Godot primarily uses its own language, GDScript, with support for C#. While Unity remains the industry standard, Godot is a great alternative with quite a lot of benefits, to the point where I’d consider it my favorite engine. That isn’t to say it is perfect, but for those looking to make their first game, it has its merits.</p>
-<p>As said before, Godot is completely free and open source! There are no hidden fees to speak of, and all the code of the engine is free to look at, modify, and contribute to. Compared to its main scripting engine competitor, Unity, Godot also runs much faster. While Unity includes various features and tools that can be useful such as version control and in-built tutorials, Godot is an extremely slim and quick program that can practically run on any machine. It supports all major OSes (Windows, Linux, Mac), and installing the entire editor takes less than 200mb. In comparison, Unity takes nearly 10gb for an installation. This makes it very versatile, while also removing a piece of friction when it comes to being motivated to work on a game, considering the much longer load times of Unity. Another huge boon in Godot’s favor is its amazing documentation at <a href="https://docs.godotengine.org/en/stable/" target="_blank">this site</a>. When it comes to technical authoring, these documents are probably some of my favorites in general, featuring great visuals, UI, and intuitive language. As GDScript is based on one of the most beginner friendly languages, Python, there are good avenues for the unexperienced. 
-When it comes to the engine itself, Godot is relatively feature complete, using a node-based system of parents and children, placed into scenes. In my opinion, this system is intuitive and works great for making large projects as it borrows many key ideas from OOP (Object Oriented Programming). The editor itself features UI that is made using Godot’s own Control node system, with neat iconography and layout.</p>
-<img src="assets/engine_shot.png" width="800px" alt="Screenshot of Godot Engine in use">
-		<p>Unfortunately, there are drawbacks too. Like I said before, Unity is the industry standard. That means much more resources online, especially when it comes to videos. Less resources also means less places to get assets for a game, like sprites, sounds, and other prefabs. While Godot has C# support, the online resources for learning about it are slim in comparison to GDScript. For those concerned, learning Godot means less transferable skills for jobs, since there are many more employers that ask for Unity experience. The difference in usage and funding means that Godot also lacks some of the most cutting-edge features in game development, with special emphasis on graphics and animations, though it isn’t relevant for most starting out.</p>
-<p>Overall, I would say that Godot is a very solid choice, especially for starting out. It is still my personal favorite game engine and has a lot of amazing and comprehensive features. As a free, beginner friendly, comprehensive game engine, Godot remains as one of the top picks for game development. There hasn’t been anything that has made me want to switch over to anything else, other than some mild annoyances or the urge to try something new.</p>
-</article>
-		<article id = "rev2" class = "review">
-	<h2 id="article2">Pixel Art – The Indie Darling</h2>
+		
+	<p>As said before, Godot is completely free and open source! There are no hidden fees to speak of, and all the code of the engine is free to look at, modify, and contribute to. Compared to its main scripting engine competitor, Unity, Godot also runs much faster. While Unity includes various features and tools that can be useful such as version control and in-built tutorials, Godot is an extremely slim and quick program that can practically run on any machine. It supports all major OSes (Windows, Linux, Mac), and installing the entire editor takes less than 200mb. In comparison, Unity takes nearly 10gb for an installation. This makes it very versatile, while also removing a piece of friction when it comes to being motivated to work on a game, considering the much longer load times of Unity. Another huge boon in Godot’s favor is its amazing documentation at <a href="https://docs.godotengine.org/en/stable/" target="_blank">this site</a>. </p><p>When it comes to technical authoring, these documents are probably some of my favorites in general, featuring great visuals, UI, and intuitive language. As GDScript is based on one of the most beginner friendly languages, Python, there are good avenues for the unexperienced. As for the engine itself, Godot is relatively feature complete, using a node-based system of parents and children, placed into scenes. In my opinion, this system is intuitive and works great for making large projects as it borrows many key ideas from OOP (Object Oriented Programming). The editor itself features UI that is made using Godot’s own Control node system, with neat iconography and layout.</p>
+		
+		<img src="assets/engine_shot.png" class="center-img" width="600px" alt="Screenshot of Godot Engine in use">
+	<p>Unfortunately, there are drawbacks too. Like I said before, Unity is the industry standard. That means much more resources online, especially when it comes to videos. Less resources also means less places to get assets for a game, like sprites, sounds, and other prefabs. While Godot has C# support, the online resources for learning about it are slim in comparison to GDScript. For those concerned, learning Godot means less transferable skills for jobs, since there are many more employers that ask for Unity experience. The difference in usage and funding means that Godot also lacks some of the most cutting-edge features in game development, with special emphasis on graphics and animations, though it isn’t relevant for most starting out.</p>
+	<p>Overall, I would say that Godot is a very solid choice, especially for starting out. It is still my personal favorite game engine and has a lot of amazing and comprehensive features. As a free, beginner friendly, comprehensive game engine, Godot remains as one of the top picks for game development. There hasn’t been anything that has made me want to switch over to anything else, other than some mild annoyances or the urge to try something new.</p>
+	</div>
+	</article>
+		<hr>
+		<article id = "review2" class = "article-grid">
+		<h2 class="review_header">Pixel Art – The Indie Darling<br><span>April 2nd, 2026 by utinj</span></br></h2>
+		
 		<img src="assets/smoothie.png" alt="Pixel art of purple smoothie">
+		
+		<div class="review_aside">
+		<h3>Alternatives</h3>
+		<p>3D Modeling - Incredibly powerful, free with Blender. Fastest animation ease and reusability but extremely high learning curve. Able to use models from the web.</p>
+		<p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+		<hr>
+		<p>Hand drawn 2D - Solid choice for already skilled artists. Using what is already familiar can work well, but needs extra care in consistancy.</p>
+		<p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></p>
+		<hr>
+		<p>Minimalism - Using simple shapes and colors can yield great looking results even done minimaly. However, this lends itself away from detailed, immersive worlds.</p>
+		<p><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></p>
+	</div>
+		
+		<div class="review_info">
+		<p>Ease of use: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i></p>
+		<p>Versatility: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></p>
+		<p>Overall: <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i></p>
+		
+		</div>
+		<div class="review_text">
 		<p>When it comes to video games and art, there are practically no limitations on what style can be used. Traditional and vector digital art, 3D models, and even live action footage and stop motion photography. However, pixel art stands out as a favorite choice among video games, especially for the often programming focused skillset that first time devlopers usually have. Pixel art has a legacy, as it once was mandatory for all video games, but nowadays is regarded as the easiest digital art to get into. Unfortunately, it too has some drawbacks for its use and creation in modern games.</p>
 	<p>For video games assets, pixel art is described to be the easiest art to get into. This is in part due to its namesake: there are only so many pixels you have to worry about. Unlike traditional art, there is less worry for precise line thicknesses, smaller details, large color palletes, holding your wrist properly, and more. Using blocks as a designing tool is often very intuitive, and some of the most popular sandbox toys and games out there operate on a similar principle, such as LEGO and Minecraft.  To an extent, this also means that the ability to create pixel art is a lot more freely available. Practically all raster drawing programs can create pixel art, and plenty of free pixel art software like <a href="https://www.piskelapp.com/" target="_blank">Piskel</a> and <a href="https://store.steampowered.com/app/1204050/Pixel_Studio__pixel_art_editor/" target="_blank">Pixel Studio</a> exist, just to name a few. As another plus to accessibility, unlike regular digital art, there’s no need to use a digital pen, tablet, or other additional device to facilitate pixel art. All you need is a mouse.</p>
 	<p>While all of this is great, there are some limitations and drawbacks to choosing pixel art for your game. Pixel art does have many advantages over traditional and digital art, but that does not mean that making good art with pixel art is necessarily easy. You still want a basic understanding of drawing principles like light, lines, and more. There are other pixel art pitfalls and designs that are best practice to avoid, like orphan pixels; pixels that are isolated with no same color neighbors tend to stand out very sharply. Additionally, it can actually be harder to get small details across depending on how small the image you have. A common example of this is eyes: there are only so many possible ways to depict them if you only have 6 pixels. </p>
-		<img src="assets/eyes_demo.png" alt="Example of various pixel art eyes">
+		<img src="assets/eyes_demo.png" class="center-img" alt="Example of various pixel art eyes">
 		<p>In my opinion, the biggest drawback comes from animation, especially in comparison to 3D models. Of course, 3D models require a lot more technical expertise, but once they are set up and rigged, creating animations is significantly easier. Like most 2D art, pixel art animation is often done frame by frame: by far the most time consuming kind of animation. Unfortunately, pixel art can even lose to other 2D art in this aspect too, as you can also rig and tween more traditional art. Doing the same for pixel art would mean creating slanted pixels and inconsistent visuals. This can work, but in my opinion, it breaks the organized, defined shapes that pixel art offers.</p>
 	<p>As a hobbyist, the amount of time and effort it takes to do animation frame by frame can be reason enough to go with a 3D game instead. Still, pixel art remains the best option for getting into 2D art and making assets for beginner projects. Of course, an experienced artist will do best by sticking with what they enjoy personally, but for the inexperienced out there, pixel art is something I’d recommend for getting into drawing and creating for games.</p>
+	</div>
 </article>
 	</div>
+	<header class="site-footer"><!-- site footer starts -->
+		<p>©</p>
+		<p>Hosted on GitHub Pages</p>
+	</header><!-- site footer ends -->
 </body>
 </html>
