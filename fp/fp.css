@@ -15,7 +15,7 @@ body{
     background: #6666CC;
     font-size: 20px;
     line-height: 1.5em;  /* adjust as needed */	
-	font-family:"Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"
+	font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'
 }
 
 h1{
@@ -26,8 +26,8 @@ span{
 	font-size:50%;
 }
 h2{
-	margin-top: 60px;
-	padding:10px;
+	margin-top: 30px;
+
 }
 p{
 	color:#000000;
@@ -161,6 +161,7 @@ nav.pagenav a:hover{
 .pagenav a {
 	text-decoration: none;
 }
+
 .lead-display{
 	width: 100%;
 	height:auto;
@@ -179,29 +180,114 @@ nav.pagenav a:hover{
 	position: relative;
 	
 }
-/* gallery grid CSS */
-        
-        div.gallery-grid {
-            display: grid;
-            grid-template-columns: auto auto auto;
-            grid-row-gap: 20px ;
-            justify-items: center;
-            align-items: start;
-            justify-content: space-between;
-			padding-left: 0px;
-        }
-                        
-        div.gallery-item {
-            width: 270px; /*should match the width of your images + width of border (if any) */
-            text-align: center;
-        } 
-        
-    /* css for styling the p/caption under the image */       
-        div.gallery-item p {
-            margin: .25em 0;
-            line-height: 135%;
-			font-size: 90%;
-        }
+
+.container {
+  display: flex;
+  padding-top: 50px;
+}
+
+.toggle-input {
+  display: none;
+}
+
+.reveal-box {
+  cursor: pointer;
+  display: block;
+}
+
+.content-wrapper {
+  background: #34495e;
+  color: white;
+  width: 900px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  
+  /* Initial height only shows the label */
+  height: 60px; 
+  transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.trigger-label {
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  background: #3498db; /* Blue for downward */
+}
+.trigger-label:hover{
+	background:#D51ADF;
+}
+
+.hidden-content {
+  display: grid;
+	grid-template-columns: auto auto;
+  gap: 20px; 
+  grid-row-gap: 20px ;
+  padding: 20px;
+  margin: 0 auto; 
+  opacity: 0;
+  /* Content slides slightly down as it appears */
+  transform: translateY(-20px); 
+  transition: opacity 0.3s, transform 0.3s;
+}
+
+.gallery-item {
+  border-radius: 8px;
+	background:#0B261C;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+	text-align: center;
+}
+.gallery-item img {
+  height: 200px;
+  object-fit:contain;
+  display: block;
+}
+.gallery-item p {
+	margin: .25em 0;
+    line-height: 135%;
+	font-size: 90%;
+	color:#9A89FF
+}
+
+/* Expansion Logic */
+.toggle-input:checked + .reveal-box .content-wrapper {
+  height: 420px;
+}
+.toggle-input:checked + .reveal-box #category-1 {
+  height: 1100px;
+}
+#category-2:checked{
+	height:300px;
+}
+.toggle-input:checked + .reveal-box .hidden-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.1s;
+}
+
+.toggle-input:checked + .reveal-box .trigger-label {
+  background: #2980b9;
+}
+
+.map{
+	width:900px;
+	height:600px;
+	border: solid black;
+	background: url("assets/engine_shot.png") no-repeat;
+	background-size: 900px 600px;
+	padding: 0;
+	margin: 0;
+	position: relative;
+}
+.map-item{
+	position: absolute;
+}
+#map-item-player{
+	padding-left: 50px;
+	padding-top: 100px;
+}
 
 table, td {
   border: 1px solid;
