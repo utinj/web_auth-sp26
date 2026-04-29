@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 	<!-- -->
-<title>map</title>
+<title>Map</title>
 	<link rel="stylesheet" href="fp.css" type="text/css">
 </head>
 <script src="https://kit.fontawesome.com/49c671f23d.js" crossorigin="anonymous"></script>
@@ -17,17 +17,128 @@
     	<a href="fp_main.html">Latest</a> <!-- this links to your main page (the one you're working at the moment) --> 
     	<a href="reviews.html">Reviews</a>
     	<a href="inventory.html">Catalogue</a>
+		<a href="map.html">Map</a>
     	<a href="fp_about.html">About</a>
   	</nav> 
 
 	</header><!-- site header ends -->
 	<div class = "wrapper">
-		<h1>Parts of a Game: Mini Shoot Arena</h1>
-		<p>Check the icons to see the individual "scene" of each object!</p>
+		<h1>Godot Game: Mini Shoot Arena</h1>
+		<p>Check the icons to see the individual parts of the game! </p>
 		<div class="map">
-			
+			<a href="#box-profile" class="map-item-wrapper">
+				<i class="fa-solid fa-box fa-xl map-item" style="color: #0CFCD5;" id="map-item-box">
+				<div class="map-info-card">
+					<p>Item Box</p>
+					<img src="assets/Item.tscn.png" alt="Item Box scene">
+				</div>
+				</i>
+			</a>
+			<a href="#player-profile" class="map-item-wrapper">
+				<i class="fa-solid fa-person-running fa-xl map-item" style="color: #0CFCD5;" id="map-item-player"><div class="map-info-card">
+					<p>The Player</p>
+					<img src="assets/Player.tscn.png" alt="Player scene">
+				</div></i>
+			</a>
+			<a href="#gun-profile" class="map-item-wrapper">
+				<i class="fa-solid fa-box fa-xl map-item" style="color: #0CFCD5;" id="map-item-gun"><div class="map-info-card">
+					<p>Basic Gun</p>
+					<img src="assets/BGun.png" alt="Gun scene">
+				</div></i>
+			</a>
+			<a href="#space-profile" class="map-item-wrapper">
+				<i class="fa-solid fa-box fa-xl map-item" style="color: #0CFCD5;" id="map-item-space"><div class="map-info-card">
+					<p>Game Space</p>
+					<img src="assets/GameSpace.tscn.png" alt="Game Space scene, showing the map">
+				</div></i>
+			</a>
+		</div>
+		
+		
+		<hr>
+		
+		<h3>Dictionary</h3>
+		<p>Scene: One cohesive group of objects that can be run independently from anything else.</p>
+		<p>Node(s): Godot's prebuilt object system that provide various functions, like displaying images or playing audio, determined by the node's type. All scenes are made using combinations of nodes.</p>
+		<p>Root Node: The node that the scene is based around.</p>
+		<p>Script: Programming that can be attached to any node, modifying its behavior.</p>
+		
+		<div class="map-profile">
+		<h2 id="player-profile">The Player</h2>
+			<div class="article-grid">
+			<div class = "review_aside">
+				<p>Scene view</p>
+			<img src="assets/Player.tscn.png" alt="Player scene">
+				<p>Scene nodes</p>
+			<img src="assets/PlayerNodes.png" alt="Player scene">
+			</div>
+			<div class = "review_text">
+		<p>The player character is one of the most ubiquitous designs in video games. In this top down, twin stick shooter game, the player scene was made relatively simple. Its main functions include moving around, recognizing collision for walls, bullets and items, and using a weapon.</p>
+			<p>In this scene, the root is a "CharacterBody2D" node, which provides prebuilt functionality for player movement, with the rest of the nodes consisting of visuals, timers, and audio handling.</p>
+			<p>The one exception is the Gun node, which is its own scene. This means that the gun can exist on its own, making variations of it much easier. Without its own scene, you would need multiple variations of the player character just to make new weapons!</p>
+			<p>As this is a multiplayer game, the player scene is spawned in multiple times, a good example as to why modular design like scenes work well in games. In order to differentiate, the CharacterBody2D script stores its own player number and color. The player is actually colorless in its scene because the color is added upon loading into the game as the color is unique per instance of the scene.</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="map-profile">
+		<h2 id="box-profile">Item Box</h2>
+			<div class="article-grid">
+			<div class = "review_aside">
+				<p>Scene view</p>
+			<img src="assets/Item.tscn.png" alt="View of Item scene">
+				<p>Scene nodes</p>
+			<img src="assets/ItemNodes.png" alt="View of Item nodes">
+			</div>
+			<div class = "review_lead">
+		<p>This is a relatively simple scene. It has a sprite, some timer nodes, collision, and a particle spawner. The root is a generic Node2D that only determines its position.</p>
+			<p>The item only serves to give a player a random weapon on collision. The spawn delay timer says when the item can be touched, and the lifetime timer says when it should be destroyed.</p>
+			<p>This scene is actually a little more interesting in the way it is spawned in, or more formally, instanced. A separate, invisible scene with no sprite called item_spawner creates this item scene on random positions on the map on random intervals.</p>
+			<p>The item_spawner also determines what weapon the item contains, setting a variable inside the item script to store it.</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="map-profile">
+		<h2 id="gun-profile">Basic Gun</h2>
+			<div class="article-grid">
+			<div class = "review_aside">
+				<p>Scene view</p>
+			<img src="assets/BGun.png" alt="View of gun scene">
+				<p>Scene nodes</p>
+			<img src="assets/BGunNodes.png" alt="View of gun nodes">
+			</div>
+			<div class = "review_lead">
+		<p>The basic gun scene that is included with player. Most of its functionality is done through the script attached to the root Node2D. </p>
+			<p>While this scene is incredibly basic and only has an audio node outside of the root, you may expect that the script attached has to be complex in order to to provide the functionality of a gun, like ammo, determining the bullet, and even avoiding hitting the user.</p>
+			<p>However, much of the code is inherited through a separate abstract gun script, which helps determine the structure of a gun. This allows the creation of multiple gun types, which only need to then write special functions for that type of gun.</p>
+			<p>As a note, the bullet is its own scene as the gun is spawning them in. While it could have been implemented in the same scene, the added modularity of separating the scenes allow for better reuse.</p>
+				</div>
+			</div>
+		</div>
+		<div class="map-profile">
+		<h2 id="space-profile">Game Space</h2>
+			<div class="article-grid">
+			<div class = "review_aside">
+				<p>Scene view</p>
+			<img src="assets/GameSpace.tscn.png" alt="View of game space scene">
+				<p>Scene nodes</p>
+			<img src="assets/GameSpaceNodes.png" alt="View of game space nodes">
+			</div>
+			<div class = "review_lead">
+		<p>The game space scene is a very important part of the game. Here, all of the individual parts come together to have a cohesive, fun game.</p>
+			<p>Here, the tilemap node creates the visible map itself, alongside its functional collision. This is also where the item_spawner scene exists, as mentioned with the <a href="#box-profile">Item scene</a></p>
+			<p>In this multiplayer game, there is a variable amount of players that is possible, so instead of pre-including the player scenes within the game space, they are spawned in using a script instead.</p>
+			<p>The game space script also determines when the game ends by counting players left, and helps to set up controller bindings on player spawn in.</p>
+				</div>
+			</div>
 		</div>
 		
 	</div>
+	
+	<header class="site-footer"><!-- site footer starts -->
+		<p>TinjTeam ©2026</p>
+		<p>Hosted on GitHub Pages</p>
+	</header><!-- site footer ends -->
 </body>
 </html>

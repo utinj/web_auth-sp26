@@ -17,7 +17,11 @@ body{
     line-height: 1.5em;  /* adjust as needed */	
 	font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif'
 }
-
+hr { 
+	border: none; 
+	border-top: 2px 
+	dashed #6666CC; 
+}
 h1{
 	color:#00314B;
 }
@@ -27,7 +31,6 @@ span{
 }
 h2{
 	margin-top: 30px;
-
 }
 p{
 	color:#000000;
@@ -206,18 +209,22 @@ nav.pagenav a:hover{
   height: 60px; 
   transition: height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
+.content-wrapper p{
+	color:#AEA725;
+	padding: 10px;
+}
 .trigger-label {
   height: 60px;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: bold;
-  background: #3498db; /* Blue for downward */
+  background: #3498db; 
 }
 .trigger-label:hover{
 	background:#D51ADF;
 }
+
 
 .hidden-content {
   display: grid;
@@ -243,6 +250,7 @@ nav.pagenav a:hover{
   height: 200px;
   object-fit:contain;
   display: block;
+	margin:10px;
 }
 .gallery-item p {
 	margin: .25em 0;
@@ -256,10 +264,10 @@ nav.pagenav a:hover{
   height: 420px;
 }
 .toggle-input:checked + .reveal-box #category-1 {
-  height: 1100px;
+  height: 1600px;
 }
-#category-2:checked{
-	height:300px;
+.toggle-input:checked + .reveal-box #category-2 {
+  height: 1500px;
 }
 .toggle-input:checked + .reveal-box .hidden-content {
   opacity: 1;
@@ -273,20 +281,102 @@ nav.pagenav a:hover{
 
 .map{
 	width:900px;
-	height:600px;
+	height:467px;
 	border: solid black;
-	background: url("assets/engine_shot.png") no-repeat;
-	background-size: 900px 600px;
+	background: url("assets/MSAmap.png") no-repeat;
+	background-size: contain;
 	padding: 0;
 	margin: 0;
 	position: relative;
 }
+.map-profile{
+	display:grid;
+	border: solid #C7C734;
+	border-radius: 8px;
+	border-bottom-color:#882A7D;
+	box-shadow: 0px 2px 1px #882A7D;
+	margin:  20px;
+	margin-top:40px;
+	background:#C7C734;
+	padding:10px;
+}
+.map-profile a{
+	color:#6666CC;
+}
+.map-profile a:hover{
+	color:purple;
+}
+.map-profile h2{
+	margin-left:100px;
+}
+.map-profile img{
+	display:block;
+	margin:auto;
+	width:200px;
+}
 .map-item{
 	position: absolute;
+	animation-name: shake;
+	animation-duration: 7s;
+	animation-iteration-count: infinite;
 }
+.map-item:hover {
+	font-size: 2em;
+	animation-name:none;
+}
+
+.map-item-wrapper {
+    position: relative;
+    display: inline-block;
+}
+
+.map-info-card {
+    display: none;
+    position: absolute;
+    bottom: 125%; 
+    left: 50%;
+    
+	font-size: 15px; 
+      color: #f32196; 
+      float: right; 
+	font-family: Segoe, 'Segoe UI', 'DejaVu Sans', 'Trebuchet MS', Verdana, 'sans-serif';
+	
+    border: solid #C7C734;
+	border-radius: 8px;
+	border-bottom-color:#882A7D;
+	box-shadow: 0px 2px 1px #882A7D;
+	background:#C7C734;
+}
+.map-info-card img{
+	width: 100px;
+	
+}
+
+.map-item-wrapper:hover .map-info-card {
+    display: inline;
+}
+
 #map-item-player{
-	padding-left: 50px;
-	padding-top: 100px;
+	top:400px;
+	left:720px;
+}
+#map-item-box{
+	top:360px;
+	left:465px;
+}
+#map-item-gun{
+	top:90px;
+	left:415px;
+}
+#map-item-space{
+	top:200px;
+	left:60px;
+}
+@keyframes shake{
+	0% {transform: rotate(0deg);}
+	10% {transform: rotate(-40deg);}
+	20% {transform: rotate(40deg);}
+	30% {transform: rotate(0deg);}
 }
 
 table, td {
