@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Catalogue</title>
+	<link rel="stylesheet" href="fp.css" type="text/css">
+</head>
+
+<body>
+	<header class="site-header"><!-- site header starts -->
+	<nav class="sitenav"> 
+  	<a href="fp_main.html" class="site-logo"> <img class="site-logo-image" src="assets/fp-sitelogo.svg" width="150px" alt="Site logo for GameTionery"> </a> 
+ 
+  
+    	<a href="fp_main.html">Home</a> <!-- this links to your main page (the one you're working at the moment) --> 
+    	<a href="reviews.html">Reviews</a>
+    	<a href="inventory.html">Catalogue</a>
+		<a href="map.html">Map</a>
+    	<a href="about.html">About</a>
+  	</nav> 
+
+	</header><!-- site header ends -->
+	<div class="wrapper">
+		<h1>The Catalogue</h1>
+		<h2>Preface</h2>
+		<p>This page contains images of various elements and assets from my various video game projects. Here you can get an overview of what it looks like to contruct a video game, the parts that make up its graphics and designs, and how it comes together to make a cohesive experience. </p>
+		<p>Most, if not all assets that make up the visual and level design of games come from outside the game engine, created by artists to be placed within the game, including both 2D and 3D art. This means that much of the catalogue is moreso focused on the art aspects of creating games, rather than the programming. Still, art is half the battle when it comes to video games. After all, programming can only define the rules of the game, but art constitutes the video portion of video games.</p>
+		<p>The catalogue is organized into groups based on the type and purpose of each asset. Within each group, the assets are somewhat ordered by date of creation and project of origin, showing the progression over the years in the way I create my art.</p>
+		
+		
+	<div class="container">
+  	<input type="checkbox" id="downward-toggle" class="toggle-input" >
+  	<label for="downward-toggle" class="reveal-box" >
+    <div class="content-wrapper" id="category-1">
+      <div class="trigger-label">2D Sprite Sheets</div>
+		<p>These are sprite sheets, which are used to animate various characters and objects inside the game. The game engine accomplishes this by individually "scrolling" through each one of the individual sprites, much like a flipbook. </p>
+		<p>Using sprite sheets is the most common and simplistic way to animate 2D elements. Some of these sheets were created in Photoshop, and others in Aseprite, a dedicated pixel art and animation maker.</p>
+      <div class="hidden-content">
+		  <div class="gallery-item">
+			  <p>Explosion effect</p>
+		  <img src="assets/explode.png" width="400px" alt="Sprite sheet for explosion effect">
+		  </div>
+		  <div class="gallery-item">
+			  <p>Bullet</p>
+		  <img src="assets/Bullet.png" width="400px" alt="Sprite sheet for a bullet">
+		  </div>
+		<div class="gallery-item">
+			<p>Weapon</p>
+		  <img src="assets/GunBouncy.png" width="400px" alt="Sprite sheet for a gunt">
+		  </div>
+		  <div class="gallery-item">
+			  <p>HP indicator</p>
+		  <img src="assets/Health.png" width="400px" alt="Sprite sheet for a health indicator">
+		  </div>
+		  <div class="gallery-item">
+			  <p>Player sheet</p>
+		  <img src="assets/player_anim.png" alt="Player sprite sheet" width = "400px">
+		  </div>
+        <div class="gallery-item">
+			<p>Lamp prop</p>
+		  <img src="assets/lamp.png" width="400px" alt="Sprite sheet for a lamp prop">
+		  </div>
+		 <div class="gallery-item">
+			 <p>Jump smoke effect</p>
+		  <img src="assets/jump_smoke.png" width="400px" alt="Smoke effect from jump sprite sheet">
+		  </div>
+      </div>
+    </div>
+	</label>	
+	</div>
+	
+	<div class="container">
+  	<input type="checkbox" id="downward-toggle-2" class="toggle-input" >
+  	<label for="downward-toggle-2" class="reveal-box" >
+    <div class="content-wrapper" id="category-2">
+      <div class="trigger-label">Materials and Shaders</div>
+		<p>Materials and shaders are more often used for 3D games, modifying the looks and features of your objects. They are used and applied to other existing assets, like 3D models, but can work in 2D as well.</p>
+		<p>Materials are fundamentally different from shaders; one is a texture represented by an image, and the other is code that modifies an image, but are grouped together here as they both accomplish similar goals.</p>
+      <div class="hidden-content">
+		  <div class="gallery-item">
+			  <p>Jouster Texture</p>
+		  <img src="assets/honse jouster_texture_0.png" width="400px" alt="Jouster texture file">
+		  </div>
+		  <div class="gallery-item">
+			  <p>Grass Texture</p>
+		  <img src="assets/floor_ground_grass.png" width="400px" alt="Grass Texture file">
+		  </div>
+		  <div class="gallery-item">
+			  <p>Stone Flooring Texture</p>
+		  <img src="assets/floor_stone_pattern.png" alt="Stone Flooring Texture file" width = "400px">
+		  </div>
+        <div class="gallery-item">
+			<p>Thatched Hay Texture</p>
+		  <img src="assets/roof_thatch_bottom.png" width="400px" alt="Thatched Hay Texture file">
+		  </div>
+		  		<div class="gallery-item">
+			<p>Perspective Shader</p>
+		  <img src="assets/perspectiveshader.png" width="400px" alt="Perspective Shader for 2D assets">
+		  </div>
+		  <div class="gallery-item">
+			  <p>Wireframe Shader</p>
+		  <img src="assets/wireshader.png" width="400px" alt="3D Wireframe Shader">
+		  </div>
+      </div>
+    </div>
+	</label>	
+	</div>
+	</div>
+	
+	<header class="site-footer"><!-- site footer starts -->
+		<p>Copyright © 2026 TinjTeam. All rights reserved.</p>
+		<p>Hosted on GitHub Pages</p>
+	</header><!-- site footer ends -->
+</body>
+</html>
