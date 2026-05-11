@@ -2,10 +2,154 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>feature</title>
+<title>Feature</title>
 	<link rel="stylesheet" href="fp.css" type="text/css">
 </head>
-
+<script src="https://kit.fontawesome.com/49c671f23d.js" crossorigin="anonymous"></script>
+	
 <body>
+	<header class="site-header"><!-- site header starts -->
+	<nav class="sitenav"> 
+  	<a href="fp_main.html" class="site-logo"> <img class="site-logo-image" src="assets/fp-sitelogo.svg" width="150px" alt="Site logo for GameTionery"> </a> 
+ 
+  
+    	<a href="fp_main.html">Home</a> <!-- this links to your main page (the one you're working at the moment) --> 
+    	<a href="reviews.html">Reviews</a>
+		<a href="map.html">Map</a>
+    	<a href="inventory.html">Catalogue</a>
+		<a href="feature.html">Feature</a>
+		<a href="gdemo.html">Play</a>
+    	<a href="about.html">About</a>
+  	</nav> 
+
+	</header><!-- site header ends -->
+	
+	<div class="wrapper">
+			<h1>Featured: Game Jam "Charge"</h1>
+		
+		<div class="pagenav">
+			
+		<p>
+		<a href="#day1">Day 1</a> |
+			<a href="#day2">Day 2</a> |
+			<a href="#day3">Day 3</a> |
+			<a href="#day4">Day 4</a> |
+			<a href="#day5">Day 5</a> |
+			<a href="#conclusion">Conclusion</a> 
+			</p>
+		</div>
+		<h2>Preface <br><span>What is a Game Jam?</span></br></h2>
+	<p>A game jam is much like a hackathon, except the goal is to make a video game. In case you don't know what that is either, it is a competition to make the best project in a limited amount of time.</p>
+	<p>Most game jams last around a week to as quick as 24 hours! This one that we participated in, however, granted us a total of 5 days. In addition, contestants must make a game themed around a specific word or phrase. The one featured here was themed around "Charge". An event starts with revealing the theme, then is ended off with demonstrations and reviews by judges.</p>
+	<p>Given the time frame and theme restriction, game jams are an incredible way of building up game development and design skills. They are also very fun, hence our participation!</p>
+	<p>With that said, lets walk through each 5 days and see how the game developed over time.</p>
+	<hr>
+	<article class="article-grid" id="day1">
+	<div class="review_header">
+	<h2>Day 1: Throwing at the Wall</h2></div>
+	<div class="review_text">
+	<p>The first day of a game jam is always quite hectic and exciting. After everyone arrives at the event, the theme is soon revealed as "Charge". Such a theme can be interpreted in many, many different ways, and so long as the game includes "Charge" in some aspect, it is a valid interpretation.</p>
+	<p>Our group, formed by 3 members of TinjTeam, set off by discussing possible ideas for what we would make. Many ideas were thrown around, such as a hamster racing game, or a more electricity themed shooter game. In the end, we ended up choosing to make a simple but fun 3D jousting game, where you could charge up over time to get faster and faster. With such time constraints, scope management is incredibly important to skirt the time limit.</p>
+	<p>With the idea out of the way, we began a project in Godot and created the initial scenes, naming it UmaTwo. This was also our first time working with 3D!</p>
+		<img src="assets/day1.png" class = "center-img" width="500px" alt="Shot of empty scene with 3D boxes">
+	</div>
+	<div class="review_footer">
+	<p class="highlight">Commited to GitHub: initial project files | 3D box model</p>	
+		<a href="">Back to Top</a>
+	</div>
+	</article>
+	<hr>
+	
+	<article class="article-grid" id="day2">
+	<div class="review_header">
+	<h2>Day 2: Getting the Basics</h2></div>
+	<div class="review_text">
+	<p>On day 2, we finalized the game's concept and design. It would be a jousting game where striking the opponent knocks them back. The goal is to knock them out of the ring for a certain amount of time, in which you would be declared the winner. The charge theme comes into play in the fact that you can accelerate as much as you want, and charging forward with greater speed yields stronger knockback power.</p>
+	<p>With the design completely out of the way, we began preparing the scenes and the skeleton code needed to make our game. We focused on the player scene on day 2, creating the 3D model based on a previous work made by our artist, and modifying it within <a href="https://www.blender.org/" target="_blank">Blender.</a> </p>
+		<p>In this iteration, there is no functional gameplay; only the absolute basics were implemented for the player, like a camera and standard CharacterBody3D physics.</p>
+		<img src="assets/day2.png" class = "center-img" width="500px" alt="Shot of flat plane with horse and knight models">
+	</div>
+	<div class="review_footer">
+	<p class="highlight">Commited to GitHub: player scene | 3D model scene | model adjustments</p>	
+	<a href="">Back to Top</a>
+	</div>
+	</article>
+	<hr>
+	
+	<article class="article-grid" id="day3">
+	<div class="review_header">
+	<h2>Day 3: First Signs of Gameplay</h2></div>
+	<div class="review_text">
+	<p>With day 3 incoming and only a little more than half of the allotted time left, we prioritized having a working, playable game. As it stands after day 2, we only had the skeleton of the player set up. It was time to add control, movement, camera and viewport set up, and functionality for jousting.</p>
+	<p>Given that the scope and complexity of the project is quite low, we did quite a lot in this single day. Character movement is simple and flat, with an ever increasing speed as you hold down a button. A state machine would help implement the movement and jousting, where players would automatically enter the "jousting state" as soon as they charged up to a certain speed. The jousting mechanic, while broken and incomplete at the time, was given extra support by setting up the player hitboxes using Area3D nodes, allowing the player's lance to strike the opponent, even if it did nothing on day 3. </p>
+		<img src="assets/day3c.png" class = "center-img" width="300px" alt="Image of player collision boxes">
+		<p>With many of the base mechanics complete, albiet lacking the knockback effect we wanted, it was enough to implement the animation of the horse walking and running.</p>
+		<img src="assets/day3.gif" class = "center-img" width="500px" alt="Gif of player running, showing split screen">
+		<p>So at the end of day 3, we already have a functioning, though very incomplete game!</p>
+	</div>
+	<div class="review_footer">
+	<p class="highlight">Commited to GitHub: viewports | player inputs | fixed momentumn | state machines + animations</p>	
+	<a href="">Back to Top</a>
+	</div>
+	</article>
+	<hr>
+	
+	<article class="article-grid" id="day4">
+	<div class="review_header">
+	<h2>Day 4: Stagnation</h2></div>
+	<div class="review_text">
+	<p>As day 4 rolls around, the clock continues to tick down towards the final day. However, today was not as productive, less due to the game itself and more of personal work that had to be done by one of our group members. Still, the team continued to work on the project, adding a few additional elements to the game.</p>
+	<p>As previously explained, the game will have a ring in which players must try to stay within, while knocking the opponent out of it. So, we implemented a very simple ring using boxes and a large Area3D node that allowed the player scene to check if it was in bounds.</p>
+		<p>Although there were a few things to fix and balance when it came to the mechanics, like how strong the knockback effect is, or how long the opponent needs to stay out of the ring in order for the player to win, most of the work this day went into the visual design. For game development in game jams, but also mostly applicable in general, it is best practice to get the mechanics working before finalizing art and visuals.</p>
+		<img src="assets/day4.png" class = "center-img" width="500px" alt="Image of arena">
+		<p>As you can see here, the ground was also replaced by a simple repeating grass texture.</p>
+	</div>
+	<div class="review_footer">
+	<p class="highlight">Commited to GitHub: basic arena | damage mechanic</p>	
+	<a href="">Back to Top</a>
+	</div>
+	</article>
+	<hr>
+	
+	<article class="article-grid" id="day5">
+	<div class="review_header">
+	<h2>Day 5: Charge forth!</h2></div>
+	<div class="review_text">
+	<p>The final, most event day. This is the day where everything has to be done, and the game fully complete, playable, and fun. While we still had a lot to do, we had the entire day left to do it, as the game jam closed at 9:00PM. </p>
+	<p>Immediately, the main goal was to finish all the elements that we designed back in days 1 and 2. This meant polishing up animations and getting the mechanics like charging and knockback to become consistent and bugless. However, thanks to good work on the base mechanics and skeletons in the days prior, we managed to produce something that we are quite happy with. Still, there was quite a lot of work done on balancing and tweaking the mechanics on the final day.</p>
+		<img src="assets/circle_arena.png" class = "center-img" width="500px" alt="Image of arena">
+		<p>The arena was slightly updated to include a few obstacles, like houses and haybales.</p>
+		<p>Much of the work done was on the player model: the knight was given a proper raster texture, and the horse used a simple polygon based texture that allowed it to be colored within the Godot editor itself. We also added a yellow highlight effect using a shader for gameplay clarity, as we found that people were travelling too fast or far from their opponent.</p>
+		<p>The cameras, and the viewports that displayed both of the player's views, were updated with 2D UI elements to show a shifting speedometer and % stat, indicating knockback strength.</p>
+		<p>Finally, numerous audio and visual effects were added to polish the overall experience of playing the game: impact shaders and time slowdown on strike, sound effects and music, and even an explosion!</p>
+		<img src="assets/day4.gif" class = "center-img" width="500px" alt="Gif of a player striking the opponent">
+		<p>With that, our game was complete! While we had many more ideas for the game, like an ultimate mechanic or a "dash" button that lets you redirect your movement quickly, we were still quite happy with what we made in 5 days as our first 3D game!</p>
+	</div>
+	<div class="review_footer">
+	<p class="highlight">Commited to GitHub: bound detection | basic map | hit box fix | death screen | Model adjustments | Shader implement | timer fix | speed meter | explosion</p>	
+	<a href="">Back to Top</a>
+	</div>
+	</article>
+	<hr>
+	
+	<article class="article-grid" id="conclusion">
+	<div class="review_header">
+	<h2>The Conclusion</h2></div>
+	<div class="review_text">
+	<p>At the end of day 5, we submitted our game to the <a href="https://itch.io/" target="_blank">itch.io</a> page and sat back as judging commenced. All the games submitted to the game jam were impressive and fun for having so little time allocated into making them, with other entries like a magnet puzzler, a top down horde battler, and some funny visual novels. Once all the games were played, the awards ceremony began, and...</p>
+		<p>We did not win any awards, unfortunately. The awards were split into categories like Best Gameplay or Best Art, and we hadn't managed to score one this time, though we did rank second when it came to the community vote!</p>
+		<p>While it is sad to have not won an award, the process of making this game was, as always, very fun and rewarding in itself. We managed to make a complete, fully functioning game within only 5 days, and it was our first 3D game to boot!</p>
+		<p>These game jams are an incredible way of building game development knowledge, stress testing your skills and building new ones. But most of all, they are a great time!</p>
+	</div>
+	<div class="review_footer">
+	<a href="">Back to Top</a>
+	</div>
+	</article>
+	
+	</div>
+	<header class="site-footer"><!-- site footer starts -->
+		<p>Copyright © 2026 TinjTeam. All rights reserved.</p>
+		<p>Hosted on GitHub Pages</p>
+	</header><!-- site footer ends -->
 </body>
 </html>

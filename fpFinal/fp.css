@@ -29,6 +29,11 @@ h1{
 .center-txt{
 	text-align: center;
 }
+.highlight{
+	background:#C7C734;
+	padding:5px;
+	border-radius:8px;
+}
 span{
 	color:#1978A9;
 	font-size:50%;
@@ -89,7 +94,7 @@ p{
 	grid-template-columns: repeat(6,1{fr});
 	grid-template-rows: auto auto auto auto auto auto;
 	grid-template-areas:
-		"rheader rheader rheader rheader rcr rcr"
+		"rheader rheader rheader rheader rheader rheader"
 		"rlead rlead rlead rlead raside raside"
 		"rinfo rinfo rinfo rinfo raside raside"
 		"rtext rtext rtext rtext raside raside"
@@ -126,13 +131,19 @@ a {
 a:hover {
 	color:#B800B9;
 }
-
+.pagenav a{
+	 color:#6666CC;
+	text-align: left;
+}
+.pagenav a:hover{
+	 text-decoration: underline;
+}
 .sitenav {
      display: flex;
      flex-direction: row;
      justify-content: center;
      column-gap: 0px; 
-	width: 900px;
+	width: 940px;
 	margin: 0 auto;
 }
 nav.sitenav a{
@@ -143,32 +154,13 @@ nav.sitenav a{
 	font-weight: bold;
 	text-decoration: none;
 	font-size: 110%;
-	
+	padding:10px;
 }
 nav.sitenav a:hover{
 	color:#00A1D8;
 	font-weight: bold;
 	text-decoration: none;
 	background-color: #550064;
-}
-.pagenav{
-	display: flex;
-     flex-direction: row;
-     justify-content: center;
-	column-gap: 1em;
-}
-nav.pagenav a{
-	color:#C95D28;
-	text-decoration: none;
-	font-size: 100%;
-}
-nav.pagenav a:hover{
-	color:#00A1D8;
-	text-decoration: none;
-}
-
-.pagenav a {
-	text-decoration: none;
 }
 
 .lead-display{
