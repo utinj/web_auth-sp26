@@ -55,8 +55,14 @@
 					<img src="assets/GameSpace.tscn.png" alt="Game Space scene, showing the map">
 				</div></i>
 			</a>
+			<a href="#metal-profile" class="map-item-wrapper">
+				<i class="fa-solid fa-chart-area fa-xl map-item" style="color: #0CFCD5;" id="map-item-metal"><div class="map-info-card">
+					<p>Metal Pipe</p>
+					<img src="assets/metal.png" alt="Metal pipe projectile with explosion collision shown">
+				</div></i>
+			</a>
 		</div>
-		
+		<p class="highlight">Legend: <i class="fa-solid fa-box fa-xl" style="color: #6666CC;"></i> = Node2D | <i class="fa-solid fa-person-running fa-xl" style="color: #6666CC;"></i> = CharacterBody2D | <i class="fa-solid fa-chart-area fa-xl" style="color: #6666cc;"></i> = Area2D</p>
 		
 		<hr>
 		
@@ -138,6 +144,25 @@
 			<p>Here, the tilemap node creates the visible map itself, alongside its functional collision. This is also where the item_spawner scene exists, as mentioned with the <a href="#box-profile">Item scene</a></p>
 			<p>In this multiplayer game, there is a variable amount of players that is possible, so instead of pre-including the player scenes within the game space, they are spawned in using a script instead.</p>
 			<p>The game space script also determines when the game ends by counting players left, and helps to set up controller bindings on player spawn in.</p>
+				</div>
+			</div>
+		</div>
+		<a href="">Back to Top</a>
+		
+		<div class="map-profile">
+		<h2 id="metal-profile">Metal Pipe</h2>
+			<div class="article-grid">
+			<div class = "review_aside">
+				<p>Scene view</p>
+			<img src="assets/metal.png" alt="View of game space scene">
+				<p>Scene nodes</p>
+			<img src="assets/metalnodes.png" alt="View of game space nodes">
+			</div>
+			<div class = "review_lead">
+		<p>This is a metal pipe explosion, an effect of one of the weapons that you can get randomly from an <a href="#box-profile">item box.</a></p>
+			<p>Unlike a generic Node2D, the root Area2D node specifies that it wants a CollisionShape to determine what that area is. These areas are used generally for basic collision detection. They do not use advanced physics processes, just detect whether a collision has happened with another shape. As such, it was useful to base all projectiles on this node as they only need to be detected by players, and collide with walls.</p>
+			<p>In this case, the metal pipe is a special weapon that explodes on impact with walls. When first thrown, the metal pipe has a smaller hitbox of just the pipe itself. The large circle area you see is only activated on collision, playing the Explosion AnimatedSprite2D node you see in the scene tree on the right.</p>
+			<p>Most of the script borrows from the abstract bullet script, defining functions like movement and collision with players. So, the metal pipe script only has to define its special explosion effect.</p>
 				</div>
 			</div>
 		</div>

@@ -411,6 +411,10 @@ nav.sitenav a:hover{
 	top:200px;
 	left:60px;
 }
+#map-item-metal{
+	top:200px;
+	left:600px;
+}
 @keyframes shake{
 	0% {transform: rotate(0deg);}
 	10% {transform: rotate(-40deg);}
