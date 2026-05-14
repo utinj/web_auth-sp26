@@ -39,7 +39,7 @@
 			</p>
 		</div>
 		<h2>Preface <br><span>What is a Game Jam?</span></br></h2>
-	<p>A game jam is much like a hackathon, except the goal is to make a video game. In case you don't know what that is either, it is a competition to make the best project in a limited amount of time.</p>
+	<p>A game jam is much like a <a href= "https://en.wikipedia.org/wiki/Hackathon" target="_blank">hackathon</a>, except the goal is to make a video game. In case you don't know what that is either, it is a competition to make the best project in a limited amount of time.</p>
 	<p>Most game jams last around a week to as quick as 24 hours! This one that we participated in, however, granted us a total of 5 days. In addition, contestants must make a game themed around a specific word or phrase. The one featured here was themed around "Charge". An event starts with revealing the theme, then is ended off with demonstrations and reviews by judges.</p>
 	<p>Given the time frame and theme restriction, game jams are an incredible way of building up game development and design skills. They are also very fun, hence our participation!</p>
 	<p>With that said, lets walk through each 5 days and see how the game developed over time.</p>
@@ -81,7 +81,7 @@
 	<h2>Day 3: First Signs of Gameplay</h2></div>
 	<div class="review_text">
 	<p>With day 3 incoming and only a little more than half of the allotted time left, we prioritized having a working, playable game. As it stands after day 2, we only had the skeleton of the player set up. It was time to add control, movement, camera and viewport set up, and functionality for jousting.</p>
-	<p>Given that the scope and complexity of the project is quite low, we did quite a lot in this single day. Character movement is simple and flat, with an ever increasing speed as you hold down a button. A state machine would help implement the movement and jousting, where players would automatically enter the "jousting state" as soon as they charged up to a certain speed. The jousting mechanic, while broken and incomplete at the time, was given extra support by setting up the player hitboxes using Area3D nodes, allowing the player's lance to strike the opponent, even if it did nothing on day 3. </p>
+	<p>Given that the scope and complexity of the project is quite low, we did quite a lot in this single day. Character movement is simple and flat, with an ever increasing speed as you hold down a button. A state machine would help implement the movement and jousting, where players would automatically enter the "jousting state" as soon as they charged up to a certain speed. The jousting mechanic, while broken and incomplete at the time, was given extra support by setting up the player hitboxes using <a href="https://docs.godotengine.org/en/stable/classes/class_area3d.html#area3d" target="_blank">Area3D</a> nodes, allowing the player's lance to strike the opponent, even if it did nothing on day 3. </p>
 		<img src="assets/day3c.png" class = "center-img" width="300px" alt="Image of player collision boxes">
 		<p>With many of the base mechanics complete, albiet lacking the knockback effect we wanted, it was enough to implement the animation of the horse walking and running.</p>
 		<img src="assets/day3.gif" class = "center-img" width="500px" alt="Gif of player running, showing split screen">
